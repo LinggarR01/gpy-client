@@ -62,7 +62,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-highlight/20 bg-primary/95 backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-5 py-4 sm:px-6 sm:py-5 lg:px-8 xl:py-5">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:gap-5 sm:px-6 sm:py-4 lg:px-8 xl:gap-8 xl:py-5">
         {/* Brand */}
         <Link
           href="/"
@@ -71,7 +71,7 @@ export default function Navbar() {
           aria-label="Graha Prima Yudatama homepage">
           <div className="flex h-16 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl   shadow-sm transition-all duration-300 group-hover:shadow-md sm:h-12 sm:w-16 md:h-14 md:w-20">
             <Image
-              src="/images/logo-gpy.webp"
+              src="/images/logo/logo-gpy.webp"
               alt="Logo Graha Prima Yudatama"
               width={160}
               height={90}
@@ -202,7 +202,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
-          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-highlight/40 text-highlight transition-all duration-300 hover:bg-highlight hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-4 focus-visible:ring-offset-primary xl:hidden"
+          className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-highlight/40 text-highlight transition-all duration-300 hover:bg-highlight hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-4 focus-visible:ring-offset-primary sm:h-11 sm:w-11 xl:hidden"
           aria-label={isOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'}
           aria-expanded={isOpen}
           aria-controls="mobile-navigation">
@@ -229,10 +229,12 @@ export default function Navbar() {
       {/* Mobile / Tablet Menu */}
       <div
         id="mobile-navigation"
-        className={`overflow-hidden px-5 transition-all duration-300 ease-in-out sm:px-6 lg:px-8 xl:hidden ${
-          isOpen ? 'max-h-195 pb-6 opacity-100' : 'max-h-0 pb-0 opacity-0'
+        className={`overflow-hidden px-4 transition-all duration-300 ease-in-out sm:px-6 lg:px-8 xl:hidden ${
+          isOpen
+            ? 'max-h-[85vh] overflow-y-auto pb-4 opacity-100'
+            : 'max-h-0 pb-0 opacity-0'
         }`}>
-        <div className="mx-auto max-w-7xl rounded-3xl border border-highlight/20 bg-primary p-4 shadow-xl">
+        <div className="mx-auto max-w-7xl rounded-2xl border border-highlight/20 bg-primary p-3 shadow-xl sm:rounded-3xl sm:p-4">
           <div className="space-y-3">
             {navLinks.map((link) => {
               const isActive = isActiveNav(link);
@@ -297,7 +299,7 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={closeMobileMenu}
-                  className={`block rounded-2xl px-5 py-4 text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-primary ${
+                  className={`block rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-primary sm:rounded-2xl sm:px-5 sm:py-4 ${
                     isActive
                       ? 'bg-highlight text-primary shadow-sm'
                       : 'text-white/85 hover:bg-white/10 hover:text-highlight'
@@ -311,7 +313,7 @@ export default function Navbar() {
           <Link
             href="/kontak"
             onClick={closeMobileMenu}
-            className="mt-4 block rounded-full bg-highlight px-6 py-4 text-center text-sm font-bold text-primary shadow-sm transition-all duration-300 hover:bg-accent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-primary">
+            className="mt-3 block rounded-full bg-highlight px-5 py-3 text-center text-sm font-bold text-primary shadow-sm transition-all duration-300 hover:bg-accent hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-2 focus-visible:ring-offset-primary sm:mt-4 sm:px-6 sm:py-4">
             Hubungi Kami
           </Link>
         </div>

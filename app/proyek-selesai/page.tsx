@@ -1,7 +1,8 @@
+import ProyekSelesaiSection from './../components/sections/proyekSelesai';
 export default function ProyekSelesai() {
   return (
     <>
-      <h1>Proyek Selesai</h1>
+      <ProyekSelesaiSection />
     </>
   );
 }

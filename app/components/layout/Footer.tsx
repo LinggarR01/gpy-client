@@ -17,7 +17,7 @@ export default function Footer() {
               aria-label="Kembali ke halaman utama Graha Prima Yudatama">
               <div className="flex h-16 w-20 shrink-0 items-center justify-center rounded-xl shadow-sm transition-transform duration-300 group-hover:scale-105">
                 <Image
-                  src="/images/logo-gpy.webp"
+                  src="/images/logo/logo-gpy.webp"
                   alt="Logo Graha Prima Yudatama"
                   width={160}
                   height={90}

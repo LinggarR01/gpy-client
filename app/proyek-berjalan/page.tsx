@@ -1,7 +1,8 @@
+import ProyekDikerjakanSection from './../components/sections/proyekDikerjakan';
 export default function ProyekBerjalan() {
   return (
     <>
-      <h1>Proyek Berjalan</h1>
+      <ProyekDikerjakanSection />
     </>
   );
 }

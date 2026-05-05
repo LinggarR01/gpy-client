@@ -21,11 +21,6 @@ export default function VisiMisiSection() {
         {/* Header */}
         <div className="grid lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <span className="inline-flex items-center rounded-full border border-accent/20 bg-white px-4 py-2 text-sm font-semibold text-accent shadow-sm">
-              <span className="h-2 w-2 rounded-full" />
-              Tentang Kami
-            </span>
-
             <h1
               id="visi-misi-heading"
               className="mt-6 max-w-2xl text-4xl font-bold tracking-tight text-primary sm:text-5xl lg:text-6xl">
@@ -49,12 +44,12 @@ export default function VisiMisiSection() {
             return (
               <article
                 key={item.title}
-                className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-primary/10 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl md:p-8">
+                className="group relative flex h-full flex-col overflow-hidden rounded-4xl border border-primary/10 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-xl md:p-8">
                 {/* Top Accent */}
                 <div className="absolute inset-x-0 top-0 h-1 bg-highlight" />
 
                 {/* Card Number */}
-                <div className="absolute right-6 top-6 text-6xl font-black leading-none text-primary/[0.04]">
+                <div className="absolute right-6 top-6 text-6xl font-black leading-none text-primary/4">
                   0{index + 1}
                 </div>
 
