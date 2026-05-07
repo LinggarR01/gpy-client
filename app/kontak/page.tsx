@@ -1,7 +1,8 @@
+import ContactSection from '@/app/components/sections/kontak';
 export default function Kontak() {
   return (
     <>
-      <h1>Kontak</h1>
+      <ContactSection />
     </>
   );
 }

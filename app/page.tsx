@@ -1,9 +1,16 @@
 import Image from 'next/image';
+import VisiMisiSection from './components/sections/visiMisi';
+import ProyekDikerjakanSection from './components/sections/proyekDikerjakan';
 
 export default function Home() {
   return (
-    <div className="">
-      <h1>Homepage</h1>
-    </div>
+    <main>
+      <section>
+        <VisiMisiSection />
+      </section>
+      <section>
+        <ProyekDikerjakanSection />
+      </section>
+    </main>
   );
 }

@@ -31,7 +31,7 @@ export default function Footer() {
                 </p>
 
                 <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-highlight">
-                  Developer Perumahan
+                  Developer Property
                 </p>
               </div>
             </Link>

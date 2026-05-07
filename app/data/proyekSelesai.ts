@@ -1,11 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import {
-  Building2,
-  Calendar,
-  FolderKanban,
-  Home,
-  LocateIcon,
-} from 'lucide-react';
+import { Calendar, FolderKanban, Home, LocateIcon, Ruler } from 'lucide-react';
 
 export type ProjectImage = {
   gambar: string;
@@ -24,11 +18,13 @@ export type ProjectDetail = {
 };
 
 export type CompletedProject = {
+  slug: string;
   name: string;
   type: string;
   developer: string;
   year: string;
   totalUnits: string;
+  landArea: string;
   status: string;
   description: string;
   logo: ProjectLogo;
@@ -38,11 +34,13 @@ export type CompletedProject = {
 
 export const completedProjects: CompletedProject[] = [
   {
+    slug: 'gramayuda-residence',
     name: 'GRAMAYUDA RESIDENCE',
     type: 'Perumahan Cluster',
     developer: 'PT. Graha Prima Yudatama',
     year: '2015',
     totalUnits: '83 Unit Rumah',
+    landArea: 'Isi luas tanah di sini',
     status: 'Selesai',
     description:
       'Gramayuda Residence merupakan salah satu proyek perumahan cluster yang dibangun oleh PT. Graha Prima Yudatama pada tahun 2015 dengan total rumah sebanyak 83 unit.',
@@ -52,20 +50,15 @@ export const completedProjects: CompletedProject[] = [
     },
     images: [
       {
-        gambar: '/images/projects/gramayuda/rumah-gramayuda.webp',
+        gambar: '/images/projects/gramayuda/konsep-rumah-gramayuda.webp',
         alt: 'Tampak depan Gramayuda Residence',
       },
     ],
     details: [
       {
         label: 'Jenis Proyek',
-        value: 'Perumahan Cluster',
+        value: 'Perumahan Komersil',
         icon: FolderKanban,
-      },
-      {
-        label: 'Developer',
-        value: 'PT. Graha Prima Yudatama',
-        icon: Building2,
       },
       {
         label: 'Tahun',
@@ -76,6 +69,11 @@ export const completedProjects: CompletedProject[] = [
         label: 'Total Unit',
         value: '83 Unit Rumah',
         icon: Home,
+      },
+      {
+        label: 'Luas Tanah',
+        value: 'Isi luas tanah di sini',
+        icon: Ruler,
       },
       {
         label: 'Lokasi Perumahan',

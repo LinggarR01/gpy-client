@@ -86,7 +86,7 @@ export default function Navbar() {
             </span>
 
             <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-highlight md:text-xs">
-              Developer Perumahan
+              Developer Property
             </span>
           </div>
         </Link>
