@@ -48,11 +48,12 @@ export const navLinks: NavLink[] = [
         href: '/proyek-selesai',
         description: ' Proyek Perumahan yang telah diselesaikan',
       },
-      {
-        label: 'Proyek Rencana',
-        href: '/proyek-rencana',
-        description: 'Proyek perumahan yang direncanakan',
-      },
+      // Disembunyikan sementara, aktifkan kembali saat halaman Proyek Rencana dibutuhkan.
+      // {
+      //   label: 'Proyek Rencana',
+      //   href: '/proyek-rencana',
+      //   description: 'Proyek perumahan yang direncanakan',
+      // },
     ],
   },
 ];

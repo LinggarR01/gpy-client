@@ -329,7 +329,7 @@ function CompletedProjectCard({ project, index }: CompletedProjectCardProps) {
           className="mt-9 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
           <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
             <Link
-              href="/kontak"
+              href={`/proyek-selesai/${project.slug}`}
               className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-4">
               Lihat Foto Perumahan
             </Link>

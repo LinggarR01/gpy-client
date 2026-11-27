@@ -1,5 +1,4 @@
 import {
-  Building2,
   Calendar,
   FolderKanban,
   Home,
@@ -18,6 +17,11 @@ export type ProjectLogo = {
   alt: string;
 };
 
+export type HouseImage = {
+  gambar: string;
+  alt: string;
+};
+
 export type ProjectDetail = {
   label: string;
   value: string;
@@ -26,27 +30,32 @@ export type ProjectDetail = {
 
 export type WorkingProject = {
   name: string;
+  slug: string;
   type: string;
   developer: string;
   year: string;
   totalUnits: string;
+  landArea: string;
   status: string;
   description: string;
   logo: ProjectLogo;
   images: ProjectImage[];
+  imageRumah: HouseImage[];
   details: ProjectDetail[];
 };
 
 export const workingProjects: WorkingProject[] = [
   {
     name: 'GRAHA TIRTAMULYA',
+    slug: 'graha-tirtamulya',
     type: 'Perumahan Subsidi',
     developer: 'PT. Graha Prima Yudatama',
-    year: '2022',
-    totalUnits: '83 Unit Rumah',
-    status: 'Selesai',
+    year: '2017 - Sekarang',
+    totalUnits: '1440 Unit Rumah',
+    landArea: '15,5 Ha',
+    status: 'Berjalan',
     description:
-      'Graha Tirtamulya merupakan salah satu perumahan yang saat ini sedang di kerjakan yang berlokasi di Karawang oleh PT. Graha Prima Yudatama seluas 15,5 Ha dan saat ini sudah di bangun sebanyak 900 unitan.',
+      'Graha Tirtamulya merupakan salah satu perumahan yang saat ini sedang dikerjakan yang berlokasi di Karawang oleh PT. Graha Prima Yudatama seluas 15,5 Ha dan saat ini sudah dibangun sebanyak 900 unitan.',
     logo: {
       gambar: '/images/logo/logo-tirtamulya.webp',
       alt: 'Logo Graha Tirtamulya',
@@ -59,6 +68,16 @@ export const workingProjects: WorkingProject[] = [
       {
         gambar: '/images/projects/tirtamulya/konsep-rumah-tirtamulya-2.webp',
         alt: 'Tampak depan Graha Tirtamulya',
+      },
+    ],
+    imageRumah: [
+      {
+        gambar: '/images/projects/tirtamulya/konsep-rumah-tirtamulya-1.webp',
+        alt: 'Tampilan rumah Graha Tirtamulya 1',
+      },
+      {
+        gambar: '/images/projects/tirtamulya/konsep-rumah-tirtamulya-2.webp',
+        alt: 'Tampilan rumah Graha Tirtamulya 2',
       },
     ],
     details: [
@@ -91,13 +110,15 @@ export const workingProjects: WorkingProject[] = [
   },
   {
     name: 'GRAHA PANGULAH',
+    slug: 'graha-pangulah',
     type: 'Perumahan Subsidi',
     developer: 'PT. Graha Prima Yudatama',
     year: '2025 - Sekarang',
-    totalUnits: '83 Unit Rumah',
-    status: 'Selesai',
+    totalUnits: '95 Unit Rumah ±',
+    landArea: '1-2 Ha ±',
+    status: 'Berjalan',
     description:
-      'Perumahan Graha Pangulah merupakan salah satu proyek perumahan yang pada saat ini sedang berlangsung di kerjakan yang berlokasi di Desa Pangulah Selatan, Kec. Kotabaru, Karawang oleh PT. Graha Prima Yudatama seluas ± 1 Ha dan saat ini sedang di bangun sebanyak 95 unitan. Dan masih berpotensi untuk pengembangan lahan seluas 1 sampai 2 hektar.',
+      'Perumahan Graha Pangulah merupakan salah satu proyek perumahan yang pada saat ini sedang berlangsung dikerjakan yang berlokasi di Desa Pangulah Selatan, Kec. Kotabaru, Karawang oleh PT. Graha Prima Yudatama seluas ± 1 Ha dan saat ini sedang dibangun sebanyak 95 unitan. Dan masih berpotensi untuk pengembangan lahan seluas 1 sampai 2 hektar.',
     logo: {
       gambar: '/images/logo/logo-pangulah.webp',
       alt: 'Logo Graha Pangulah',
@@ -110,6 +131,16 @@ export const workingProjects: WorkingProject[] = [
       {
         gambar: '/images/projects/pangulah/konsep-rumah-pangulah-2.webp',
         alt: 'Konsep rumah Graha Pangulah',
+      },
+    ],
+    imageRumah: [
+      {
+        gambar: '/images/projects/pangulah/konsep-rumah-pangulah-1.webp',
+        alt: 'Tampilan rumah Graha Pangulah 1',
+      },
+      {
+        gambar: '/images/projects/pangulah/konsep-rumah-pangulah-2.webp',
+        alt: 'Tampilan rumah Graha Pangulah 2',
       },
     ],
     details: [
@@ -125,7 +156,7 @@ export const workingProjects: WorkingProject[] = [
       },
       {
         label: 'Luas Tanah',
-        value: 'Isi luas tanah di sini',
+        value: '1-2 Ha ±',
         icon: Ruler,
       },
       {
@@ -135,7 +166,7 @@ export const workingProjects: WorkingProject[] = [
       },
       {
         label: 'Lokasi Perumahan',
-        value: 'Desa Pangulah Selatan, Kec. Kotabaru, Karawang ',
+        value: 'Desa Pangulah Selatan, Kec. Kotabaru, Karawang',
         icon: LocateIcon,
       },
     ],

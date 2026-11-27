@@ -1,7 +1,6 @@
+import { notFound } from 'next/navigation';
+
+// Disembunyikan sementara, hapus notFound() saat halaman ini dibutuhkan.
 export default function ProyekRencana() {
-  return (
-    <>
-      <h1>Proyek Rencana</h1>
-    </>
-  );
+  notFound();
 }

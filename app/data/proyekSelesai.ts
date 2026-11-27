@@ -11,6 +11,11 @@ export type ProjectLogo = {
   alt: string;
 };
 
+export type HouseImage = {
+  gambar: string;
+  alt: string;
+};
+
 export type ProjectDetail = {
   label: string;
   value: string;
@@ -30,6 +35,7 @@ export type CompletedProject = {
   logo: ProjectLogo;
   images: ProjectImage[];
   details: ProjectDetail[];
+  imageRumah: HouseImage[];
 };
 
 export const completedProjects: CompletedProject[] = [
@@ -52,6 +58,16 @@ export const completedProjects: CompletedProject[] = [
       {
         gambar: '/images/projects/gramayuda/konsep-rumah-gramayuda.webp',
         alt: 'Tampak depan Gramayuda Residence',
+      },
+    ],
+    imageRumah: [
+      {
+        gambar: '/images/projects/gramayuda/tampilan-rumah/gramayuda-1.webp',
+        alt: 'Tampilan rumah Gramayuda Residence 1',
+      },
+      {
+        gambar: '/images/projects/gramayuda/tampilan-rumah/gramayuda-2.webp',
+        alt: 'Tampilan rumah Gramayuda Residence 1',
       },
     ],
     details: [
