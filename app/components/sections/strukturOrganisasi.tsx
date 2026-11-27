@@ -31,7 +31,8 @@ export default function StrukturOrganisasiSection() {
                   alt="Struktur organisasi PT. Graha Prima Yudatama"
                   width={1600}
                   height={1000}
-                  priority
+                  loading="eager"
+                  fetchPriority="high"
                   className="h-auto w-full object-contain transition-transform duration-500 group-hover:scale-[1.01]"
                 />
               </div>

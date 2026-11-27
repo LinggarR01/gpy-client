@@ -139,8 +139,8 @@ function CompletedProjectCard({ project, index }: CompletedProjectCardProps) {
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
                 className="object-cover"
-                priority={index === 0 && activeIndex === 0}
-                fetchPriority="high"
+                loading={index === 0 ? 'eager' : 'lazy'}
+                fetchPriority={index === 0 ? 'high' : 'auto'}
               />
             </motion.div>
           </AnimatePresence>
@@ -174,7 +174,6 @@ function CompletedProjectCard({ project, index }: CompletedProjectCardProps) {
                   width={96}
                   height={96}
                   className="h-full w-full object-contain"
-                  fetchPriority="high"
                 />
               </div>
 
@@ -265,7 +264,6 @@ function CompletedProjectCard({ project, index }: CompletedProjectCardProps) {
                 width={96}
                 height={96}
                 className="h-full w-full object-contain"
-                fetchPriority="high"
               />
             </motion.div>
 

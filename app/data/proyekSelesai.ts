@@ -14,6 +14,8 @@ export type ProjectLogo = {
 export type HouseImage = {
   gambar: string;
   alt: string;
+  width: number;
+  height: number;
 };
 
 export type ProjectDetail = {
@@ -64,10 +66,14 @@ export const completedProjects: CompletedProject[] = [
       {
         gambar: '/images/projects/gramayuda/tampilan-rumah/gramayuda-1.webp',
         alt: 'Tampilan rumah Gramayuda Residence 1',
+        width: 2139,
+        height: 1193,
       },
       {
         gambar: '/images/projects/gramayuda/tampilan-rumah/gramayuda-2.webp',
-        alt: 'Tampilan rumah Gramayuda Residence 1',
+        alt: 'Tampilan rumah Gramayuda Residence 2',
+        width: 2139,
+        height: 1203,
       },
     ],
     details: [

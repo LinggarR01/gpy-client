@@ -115,7 +115,8 @@ export default function ProfilePerusahaanSection() {
                 src={companyProfile.image.gambar}
                 alt={companyProfile.image.alt}
                 fill
-                priority
+                loading="eager"
+                fetchPriority="high"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />

@@ -139,8 +139,8 @@ function WorkingProjectCard({ project, index }: WorkingProjectCardProps) {
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"
                 className="object-cover"
-                priority={index === 0 && activeIndex === 0}
-                fetchPriority="high"
+                loading={index === 0 ? 'eager' : 'lazy'}
+                fetchPriority={index === 0 ? 'high' : 'auto'}
               />
             </motion.div>
           </AnimatePresence>
@@ -337,13 +337,23 @@ function WorkingProjectCard({ project, index }: WorkingProjectCardProps) {
         <motion.div
           variants={fadeUpVariants}
           className="mt-9 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-          <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
-            <Link
-              href="/kontak"
-              className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-4">
-              Lihat Foto Perumahan
-            </Link>
-          </motion.div>
+          {project.imageRumah.length > 0 ? (
+            <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
+              <Link
+                href={`/proyek-berjalan/${project.slug}`}
+                className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-4">
+                Lihat Foto Perumahan
+              </Link>
+            </motion.div>
+          ) : (
+            <motion.div whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}>
+              <Link
+                href="/kontak"
+                className="inline-flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-highlight focus-visible:ring-offset-4">
+                Hubungi Kami
+              </Link>
+            </motion.div>
+          )}
         </motion.div>
       </motion.article>
     </motion.div>

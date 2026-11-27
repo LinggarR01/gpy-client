@@ -20,6 +20,8 @@ export type ProjectLogo = {
 export type HouseImage = {
   gambar: string;
   alt: string;
+  width: number;
+  height: number;
 };
 
 export type ProjectDetail = {
@@ -72,12 +74,32 @@ export const workingProjects: WorkingProject[] = [
     ],
     imageRumah: [
       {
-        gambar: '/images/projects/tirtamulya/konsep-rumah-tirtamulya-1.webp',
-        alt: 'Tampilan rumah Graha Tirtamulya 1',
+        gambar:
+          '/images/projects/tirtamulya/tampilan-rumah/graha-tirtamulya-1.webp',
+        alt: 'Deretan rumah Graha Tirtamulya dengan fasad kuning, hijau, dan abu-abu',
+        width: 1280,
+        height: 591,
       },
       {
-        gambar: '/images/projects/tirtamulya/konsep-rumah-tirtamulya-2.webp',
-        alt: 'Tampilan rumah Graha Tirtamulya 2',
+        gambar:
+          '/images/projects/tirtamulya/tampilan-rumah/graha-tirtamulya-4.webp',
+        alt: 'Tampak depan satu unit rumah Graha Tirtamulya',
+        width: 591,
+        height: 1280,
+      },
+      {
+        gambar:
+          '/images/projects/tirtamulya/tampilan-rumah/graha-tirtamulya-2.webp',
+        alt: 'Barisan rumah Graha Tirtamulya di sepanjang jalan perumahan',
+        width: 1280,
+        height: 591,
+      },
+      {
+        gambar:
+          '/images/projects/tirtamulya/tampilan-rumah/graha-tirtamulya-3.webp',
+        alt: 'Suasana jalan dan deretan rumah di kawasan Graha Tirtamulya',
+        width: 1280,
+        height: 591,
       },
     ],
     details: [
@@ -133,16 +155,8 @@ export const workingProjects: WorkingProject[] = [
         alt: 'Konsep rumah Graha Pangulah',
       },
     ],
-    imageRumah: [
-      {
-        gambar: '/images/projects/pangulah/konsep-rumah-pangulah-1.webp',
-        alt: 'Tampilan rumah Graha Pangulah 1',
-      },
-      {
-        gambar: '/images/projects/pangulah/konsep-rumah-pangulah-2.webp',
-        alt: 'Tampilan rumah Graha Pangulah 2',
-      },
-    ],
+    // Foto tampilan rumah belum tersedia, tombol "Lihat Foto Perumahan" otomatis disembunyikan.
+    imageRumah: [],
     details: [
       {
         label: 'Jenis Proyek',
