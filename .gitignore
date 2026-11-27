@@ -19,7 +19,6 @@
 
 # production
 /build
-/gpy-site.zip
 
 # misc
 .DS_Store
