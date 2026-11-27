@@ -10,6 +10,12 @@ type ProjectDetailPageProps = {
   }>;
 };
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return completedProjects.map((project) => ({ slug: project.slug }));
+}
+
 export default async function ProjectDetailPage({
   params,
 }: ProjectDetailPageProps) {
